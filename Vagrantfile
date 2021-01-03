@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     node.vm.box = "ubuntu/xenial64"
     node.vm.hostname = 'slave-node01'
     node.vm.network :private_network, ip: "192.168.56.102"
-	jenkins.vm.provision "shell", path: "install_basic_tool.sh"
+    node.vm.provision "shell", path: "install_basic_tool.sh"
 
   end
 end
